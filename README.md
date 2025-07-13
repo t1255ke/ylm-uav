@@ -26,7 +26,7 @@ start_backend.bat
 執行後將自動進入 `mast3r_api/`、建構 Docker 容器並啟動 FastAPI 應用。
 
 打開瀏覽器前往：
-👉 http://localhost:8000/docs  
+👉 http://localhost:8001/docs  
 可查看並測試後端 API（影片上傳、模型處理等）
 
 ---
@@ -88,19 +88,6 @@ npm run dev      # 啟動本地開發伺服器
 - 基於大感受野卷積與深度學習的影像修補模型
 - 用於去除遮擋、填補物件缺失區域，提升 3D 建模準確性
 - 支援大區域修補，適用於 UAV 影像中的雜訊修復與細節補全
-## 📁 專案結構簡介
-
-```
-ylm-uav/
-├── backend/              # FastAPI 後端
-│   ├── mast3r_api/       # FastAPI 應用與 Dockerfile
-│   ├── start_backend.bat # Windows 啟動腳本
-│   └── docker-compose.yaml
-├── glb-viewer-app/       # Vue 3 前端專案（Vite + Three.js）
-│   ├── src/
-│   └── public/
-├── README.md             # 本文件
-```
 
 ---
 
@@ -109,7 +96,7 @@ ylm-uav/
 - 後端與前端請分別啟動
 - 須確認 Docker Desktop 已執行
 - 前端開發伺服器預設 port 為 `5173`
-- 後端預設 API port 為 `8000`
+- 後端預設 API port 為 `8001`
 - 若需跨機測試，請開放對應 port 或使用內網 IP
 - 模型需為 `.glb` 格式，影片為 `.mp4` 格式
 
@@ -139,16 +126,6 @@ NTUT UAV 團隊
   > "Grounding Image Matching in 3D with MASt3R."  
   > In European Conference on Computer Vision (ECCV), 2024.  
   > [arXiv:2406.09756](https://arxiv.org/abs/2406.09756)  
-  > BibTeX:  
-  ```bibtex
-  @inproceedings{Leroy2024GroundingIM,
-    title={Grounding Image Matching in 3D with MASt3R},
-    author={Vincent Leroy and Yohann Cabon and Jérôme Revaud},
-    booktitle={European Conference on Computer Vision},
-    year={2024},
-    url={https://api.semanticscholar.org/CorpusID:270521424}
-  }
-  ```
 
 - 🔷 **LaMa** – Resolution-robust Large Mask Inpainting with Fourier Convolutions  
   GitHub: [https://github.com/advimman/lama](https://github.com/advimman/lama)  
