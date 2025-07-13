@@ -13,7 +13,7 @@
 | `viewer_api.py` | `/get_model/{session_id}` | 依照 session ID 提供對應的 glb 模型下載 |
 | `mast3r_api.py` | `/reconstruct` | MASt3R 重建 API，接收處理過的影格並產生 3D 模型 |
 | `file_utils.py` | 工具模組 | 處理資料夾建立、檔案儲存與清除暫存資料等共用邏輯 |
-| `yolo_loader.py` | 工具 | 載入 YOLO 模型與設定檔，供 YOLO 偵測模組使用 |
+| `yolo_loader.py` | 工具模組 | 載入 YOLO 模型與設定檔，供 YOLO 偵測模組使用 |
 | `main.py` | 主應用 | 整合路由並設定 CORS 與靜態資源服務 |
 
 ---
