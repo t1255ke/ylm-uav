@@ -126,7 +126,6 @@ NTUT UAV 團隊
 ## 📜 授權 License
 
 本專案依據 MIT License 授權，詳見 `LICENSE` 檔案。
-
 ---
 
 ## 📚 參考資料與引用（References）
@@ -136,9 +135,20 @@ NTUT UAV 團隊
 - 🔷 **Mast3r** – Multi-view Geometry Aware Canonical Matching  
   GitHub: [https://github.com/naver/mast3r](https://github.com/naver/mast3r)  
   請參考原論文：  
-  > Hyeonwoo Yu, Wonjune Cho, Junsik Kim, Taekyun Jeon, In So Kweon.  
-  > "Mast3r: Multiple View Geometry-Aware Self-supervised 3D Reconstruction."  
-  > In ECCV 2022. [arXiv:2406.09756](https://arxiv.org/abs/2406.09756)
+  > Vincent Leroy, Yohann Cabon, Jérôme Revaud.  
+  > "Grounding Image Matching in 3D with MASt3R."  
+  > In European Conference on Computer Vision (ECCV), 2024.  
+  > [arXiv:2406.09756](https://arxiv.org/abs/2406.09756)  
+  > BibTeX:  
+  ```bibtex
+  @inproceedings{Leroy2024GroundingIM,
+    title={Grounding Image Matching in 3D with MASt3R},
+    author={Vincent Leroy and Yohann Cabon and Jérôme Revaud},
+    booktitle={European Conference on Computer Vision},
+    year={2024},
+    url={https://api.semanticscholar.org/CorpusID:270521424}
+  }
+  ```
 
 - 🔷 **LaMa** – Resolution-robust Large Mask Inpainting with Fourier Convolutions  
   GitHub: [https://github.com/advimman/lama](https://github.com/advimman/lama)  
