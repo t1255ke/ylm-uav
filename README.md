@@ -70,6 +70,24 @@ npm run dev      # 啟動本地開發伺服器
 
 ---
 
+
+---
+
+## 🧠 模型與技術細節
+
+本專案整合以下開源模型以提升影片處理與 3D 建構品質：
+
+### 🔷 [Mast3r](https://github.com/naver/mast3r) - 多視角幾何重建
+
+- 由 NAVER 開發的多視角深度估計與相機姿態恢復模型
+- 應用於影片轉 3D 模型的幾何一致性重建階段
+- 特別適用於低視差、非對稱移動的 UAV 視角
+
+### 🔷 [LaMa](https://github.com/advimman/lama) - 高品質影像修復
+
+- 基於大感受野卷積與深度學習的影像修補模型
+- 用於去除遮擋、填補物件缺失區域，提升 3D 建模準確性
+- 支援大區域修補，適用於 UAV 影像中的雜訊修復與細節補全
 ## 📁 專案結構簡介
 
 ```
@@ -91,7 +109,7 @@ ylm-uav/
 - 後端與前端請分別啟動
 - 須確認 Docker Desktop 已執行
 - 前端開發伺服器預設 port 為 `5173`
-- 後端預設 API port 為 `8001`
+- 後端預設 API port 為 `8000`
 - 若需跨機測試，請開放對應 port 或使用內網 IP
 - 模型需為 `.glb` 格式，影片為 `.mp4` 格式
 
@@ -108,3 +126,23 @@ NTUT UAV 團隊
 ## 📜 授權 License
 
 本專案依據 MIT License 授權，詳見 `LICENSE` 檔案。
+
+---
+
+## 📚 參考資料與引用（References）
+
+本專案整合以下開源模型技術，特此致謝並引用原作者：
+
+- 🔷 **Mast3r** – Multi-view Geometry Aware Canonical Matching  
+  GitHub: [https://github.com/naver/mast3r](https://github.com/naver/mast3r)  
+  請參考原論文：  
+  > Hyeonwoo Yu, Wonjune Cho, Junsik Kim, Taekyun Jeon, In So Kweon.  
+  > "Mast3r: Multiple View Geometry-Aware Self-supervised 3D Reconstruction."  
+  > In ECCV 2022. [arXiv:2204.00636](https://arxiv.org/abs/2204.00636)
+
+- 🔷 **LaMa** – Resolution-robust Large Mask Inpainting with Fourier Convolutions  
+  GitHub: [https://github.com/advimman/lama](https://github.com/advimman/lama)  
+  請參考原論文：  
+  > Andrey Vasiliev, Egor Zakharov, Dmitry Ulyanov, Victor Lempitsky.  
+  > "LaMa: Resolution-robust Large Mask Inpainting with Fourier Convolutions."  
+  > In CVPR 2022. [arXiv:2109.07161](https://arxiv.org/abs/2109.07161)
