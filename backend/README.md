@@ -1,6 +1,6 @@
 # 🧠 Backend - FastAPI for UAV 影片處理與 3D 重建
 
-本後端系統基於 FastAPI 架構，整合 YOLOv8、LaMa 與 MASt3R 等模型，實現影片上傳、物件偵測、人車移除及 3D 模型重建等功能。所有服務均容器化，支援跨平台部署。
+本後端系統基於 FastAPI 架構，整合 YOLO、LaMa 與 MASt3R 等模型，實現影片上傳、物件偵測、人車移除及 3D 模型重建等功能。所有服務均容器化，支援跨平台部署。
 
 ---
 
@@ -65,7 +65,7 @@ backend/
 │   ├── file_utils.py
 │   ├── demo.py
 │   └── Dockerfile
-├── models/                  # YOLOv8 權重檔案（yolo8.pt, yolo10.pt...）
+├── models/                  # YOLO 權重檔案（yolo8.pt, yolo10.pt...）
 ├── temp/                    # 暫存上傳與處理資料（依 session 分類）
 ├── requirements.txt
 ├── docker-compose.yaml
