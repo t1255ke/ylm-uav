@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  mast3r-api:
+    runtime: nvidia
+    build:
+      context: .
+      dockerfile: mast3r_api/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./temp:/app/temp
+    container_name: mast3r-api
+
