@@ -1,4 +1,4 @@
-# 📦 UAV 影片上傳與 3D 模型顯示系統
+# 📦 Automatic Dynamic Object Removal for UAV-based Videogrammetry and 3D Reconstruction
 
 本專案為前後端分離架構，前端採用 Vue 3（Options API）與 Three.js 建構使用者介面與 3D 模型顯示，後端則使用 FastAPI 處理影片上傳與模型生成，並以 Docker 封裝後端服務，支援跨平台快速部署與開發。
 
