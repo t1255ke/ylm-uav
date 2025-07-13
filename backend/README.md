@@ -21,12 +21,12 @@
 
 本系統啟動兩個 FastAPI 實例，分別服務不同處理流程：
 
-- 📍 `http://localhost:8001/docs`[http://localhost:8000/docs] 
+- 📍  [http://localhost:8001/docs](http://localhost:8001/docs)
   - `/detect`：影片解析與物件遮罩
   - `/inpaint`：LaMa 修復與觸發重建
   - `/get_model/{session_id}`：回傳 `.glb` 模型檔案
 
-- 📍 `http://localhost:8000/docs`[http://localhost:8000/docs]
+- 📍  [http://localhost:8000/docs](http://localhost:8000/docs)
   - `/reconstruct`：單獨提供 MASt3R 模組進行 3D 重建任務
 
 使用 Swagger UI 可直接測試各項 API。
