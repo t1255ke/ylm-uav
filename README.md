@@ -138,7 +138,7 @@ NTUT UAV 團隊
   請參考原論文：  
   > Hyeonwoo Yu, Wonjune Cho, Junsik Kim, Taekyun Jeon, In So Kweon.  
   > "Mast3r: Multiple View Geometry-Aware Self-supervised 3D Reconstruction."  
-  > In ECCV 2022. [arXiv:2204.00636](https://arxiv.org/abs/2204.00636)
+  > In ECCV 2022. [arXiv:2406.09756](https://arxiv.org/abs/2406.09756)
 
 - 🔷 **LaMa** – Resolution-robust Large Mask Inpainting with Fourier Convolutions  
   GitHub: [https://github.com/advimman/lama](https://github.com/advimman/lama)  
