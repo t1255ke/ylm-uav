@@ -21,12 +21,12 @@
 
 本系統啟動兩個 FastAPI 實例，分別服務不同處理流程：
 
-- 📍 `http://localhost:8001/docs`  
+- 📍 `http://localhost:8001/docs`[http://localhost:8000/docs] 
   - `/detect`：影片解析與物件遮罩
   - `/inpaint`：LaMa 修復與觸發重建
   - `/get_model/{session_id}`：回傳 `.glb` 模型檔案
 
-- 📍 `http://localhost:8000/docs`  
+- 📍 `http://localhost:8000/docs`[http://localhost:8000/docs]
   - `/reconstruct`：單獨提供 MASt3R 模組進行 3D 重建任務
 
 使用 Swagger UI 可直接測試各項 API。
@@ -73,16 +73,30 @@ backend/
 
 ---
 
+
 ## 🧪 測試方式
 
-可使用 Swagger UI 或 CLI 工具如 curl：
+可使用 Swagger UI 或 CLI 工具（如 curl）進行三步驟測試：
 
+### 1️⃣ 上傳影片並產生 Session
 ```bash
-curl -X POST http://localhost:8001/detect/ -F "video=@your_video.mp4"
+curl -X POST http://localhost:8001/detect/ \
+  -F "video=@your_video.mp4"
 ```
 
-接著依序呼叫：
-1. `/inpaint`
-2. `/get_model/{session_id}`
+成功會回傳：
+```json
+{ "session_id": "your-session-id" }
+```
 
-即可取得重建後的 3D 模型檔。
+### 2️⃣ 修補與建模（需傳入 session_id）
+```bash
+curl -X POST http://localhost:8001/inpaint/ \
+  -H "Content-Type: application/json" \
+  -d "{\"session_id\": \"your-session-id\"}"
+```
+
+### 3️⃣ 下載生成的 glb 模型
+```bash
+curl -O http://localhost:8001/get_model/your-session-id
+```
