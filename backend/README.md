@@ -80,26 +80,14 @@ backend/
 
 ---
 
-## 📦 模型與技術整合
-
-- 🎯 YOLOv8：進行物件偵測並建立遮罩（`yolo_loader.py`）
-- 🧽 LaMa：影像修復（遮蔽區域填補）
-- 🏗️ MASt3R：多視角 3D 模型重建（從影格輸出 glb）
-
----
-
 ## 🧪 測試說明
 
 可透過 Swagger UI 或 `curl` 測試：
 
 ```bash
-curl -X POST http://localhost:8000/detect/ -F "video=@input.mp4"
+curl -X POST http://localhost:8001/detect/ -F "video=@input.mp4"
 ```
 
 成功後將回傳 `session_id`，可依序呼叫 `/inpaint` → `/get_model/` 取得模型。
 
 ---
-
-## 📜 授權
-
-本後端使用之第三方模型（YOLOv8, LaMa, MASt3R）皆依其原始授權規範使用。
